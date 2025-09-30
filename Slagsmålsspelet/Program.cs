@@ -288,8 +288,10 @@ while (playAgain)
     else if (choice == "4")
     {
         Console.Clear();
+        Console.WriteLine("This is how the GAME works:");
+        Thread.Sleep(75);
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
         Console.WriteLine("""
-        This is how the GAME works:
 
         > Both players get 100 base Health
         > Then an additional randomized number between 0-100 is added to both players Health
@@ -298,15 +300,20 @@ while (playAgain)
         > Then, depending on the opponents added additional Health, you will recieve more Max damage
         > So the same number of added additional Health to the opponent, will be added to your Max Damage
         > Damage is also randomized each round (Between 0 and Max Damage)
-        
+
+        """);
+        Thread.Sleep(75);
+        Console.WriteLine("""
         > Boss Battle is different though...
         > They also get 0 - 100 added Health, and damage depending on your added Health
         > However, on top of that, an added 100 Health and 100 Max Damage
         
-        > Good Luck!
-
-        Press ENTER to continue
+        Good Luck!
+        
         """);
+        Console.ResetColor();
+        Thread.Sleep(75);
+        Console.WriteLine("Press ENTER to continue");
 
         Console.ReadLine();
     }
